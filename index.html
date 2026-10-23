@@ -3,7 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Central de Jogos dos Blocos · V00.08</title>
+<title>Central de Jogos dos Blocos · V00.09</title>
+<!-- V00.09 · CLD-557 · 23/10/2026 · Marcos 13:00: "pré-selecionado a TRILHA em vez de por tipo, e já pré-selecionada a tela cheia; se o estudante clicar aí, aí sim sai da tela cheia".
+     1) a Central abre sempre na aba trilha (o estudante ainda pode trocar para "por tipo").
+     2) tela cheia: o navegador só deixa entrar com um toque da pessoa. O PRIMEIRO toque ou tecla em qualquer lugar já entra em tela cheia
+        (também se o 1º toque for no próprio botão). Depois, o botão "Sair da tela cheia" é que tira. Se o estudante sair, a Central não força de novo. -->
 <!-- V00.08 · CLD-148 · CENTRAL DE JOGOS · HTML DE TESTE
      Marcos, 12/10 11:08: "um HTML exclusivo para jogos · como no 4º bim, por tipo de jogo · também a opção por trilha ·
      todos os jogos até agora num HTML só · sem perder motor algum nem os combinados de cores e funcionamentos".
@@ -66,10 +70,10 @@ body{margin:0;background:radial-gradient(circle at 50% 15%,#283593,#1A237E 55%,#
 </style>
 </head>
 <body>
-<div id="topo"><span class="ver">V00.08</span><span class="tt">🎮 Central de Jogos</span><button type="button" id="btFSc" title="tela cheia" onclick="alternaCheia()"><span class="ic">🖥️</span><span class="tx"> Tela cheia</span></button>
-  <div id="abas"><button type="button" id="abTipo" class="on" onclick="aba('tipo')">🧩 por tipo</button><button type="button" id="abTrilha" onclick="aba('trilha')">🗺️ trilha</button></div></div>
-<div class="pg on" id="pgTipo"></div>
-<div class="pg" id="pgTrilha"><div id="tInfo"></div><div id="mapa"></div><div id="tLeg"></div></div>
+<div id="topo"><span class="ver">V00.09</span><span class="tt">🎮 Central de Jogos</span><button type="button" id="btFSc" title="tela cheia" onclick="alternaCheia()"><span class="ic">🖥️</span><span class="tx"> Tela cheia</span></button>
+  <div id="abas"><button type="button" id="abTipo" onclick="aba('tipo')">🧩 por tipo</button><button type="button" id="abTrilha" class="on" onclick="aba('trilha')">🗺️ trilha</button></div></div>
+<div class="pg" id="pgTipo"></div>
+<div class="pg on" id="pgTrilha"><div id="tInfo"></div><div id="mapa"></div><div id="tLeg"></div></div>
 <div id="palco"><div id="palcoBar"><span class="nm" id="palcoNm"></span><button type="button" class="pcPa" title="pausar o jogo" onclick="mandaJogo('pausa')">⏸️ pausa</button><button type="button" class="pcRe" title="recomeçar do zero" onclick="mandaJogo('pedeRecomeco')">🔁 recomeçar</button><button type="button" onclick="fechaJogo()">✖ voltar ao menu</button></div><iframe id="moldura" allow="fullscreen" allowfullscreen></iframe></div>
 <div id="aviso"></div>
 <script>
@@ -163,7 +167,16 @@ window.addEventListener("message", function(ev){ const m=ev.data||{}; if(m.centr
     A.className=""; A.innerHTML='✅ Parada concluída!<br>'+JG[k].n+' guardou a fase '+(ATUAL.fase+1)+'.<button type="button" onclick="fechaJogo()">🗺️ voltar à trilha</button>' }
   else { A.className="no"; A.innerHTML='Ainda não foi desta vez.<br>A parada continua esperando você.<button type="button" onclick="abreJogo(ATUAL.k, ATUAL.fase)">🔁 tentar de novo</button>' }
   A.style.display="block" });
-lerTR(); porTipo(); try{ if(localStorage.getItem("central_aba")==="trilha") aba("trilha") }catch(e){}
+lerTR(); porTipo(); /* V00.08 · desativado no V00.09 (CLD-557: a Central abre sempre na trilha): try{ if(localStorage.getItem("central_aba")==="trilha") aba("trilha") }catch(e){} */
+aba("trilha");
+/* V00.09 · CLD-557 · tela cheia pré-selecionada: o 1º toque ou tecla em qualquer lugar entra; o botão serve para SAIR (e entrar de novo) */
+(function(){ let feito=false; const b=document.getElementById("btFSc");
+  function primeiro(ev){ if(feito) return; feito=true; document.removeEventListener("pointerdown",primeiro,true); document.removeEventListener("keydown",primeiro,true);
+    const d=document; if(d.fullscreenElement||d.webkitFullscreenElement) return;
+    entraCheia(); if(b && ev && ev.target && b.contains(ev.target)) b.dataset.pula="1" }
+  document.addEventListener("pointerdown",primeiro,true); document.addEventListener("keydown",primeiro,true);
+  if(b){ b.onclick=function(){ if(b.dataset.pula){ delete b.dataset.pula; return } alternaCheia() } }
+  atFSc() })();
 window.__plano=plano;
 </script>
 </body>
