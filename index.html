@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Central de Jogos dos Blocos · V00.40</title>
+<title>Central de Jogos dos Blocos · V00.45</title>
 <!-- V00.30 · CENTRAL-DE-JOGOS CLD-074 · 26/10/2026 · AS DICAS DA SEGUNDA CHANCE (Marcos 14:00).
      Tres dicas sobre a palavra, liberadas de 40 em 40 segundos por um cronometro.
      Quem da dica e SO o BIT ou a B.IA, alternando entre os dois; os outros bichos entram no meio,
@@ -292,7 +292,7 @@ body.foco body.foco #pcFoco{background:#6A1B9A!important}#pcSai{background:#C628
 </style>
 </head>
 <body>
-<div id="topo"><span class="ver">V00.40</span><span class="tt">🎮 Central de Jogos</span><span class="par" id="topPar">📍 parada <b id="topParN">01</b><span id="topParJ"></span></span><button type="button" class="comp" id="btComp" onclick="abreComp()">💻 Tecnologia</button><button type="button" id="btFSc" title="tela cheia" onclick="alternaCheia()"><span class="ic">🖥️</span><span class="tx"> Tela cheia</span></button>
+<div id="topo"><span class="ver">V00.45</span><span class="tt">🎮 Central de Jogos</span><span class="par" id="topPar">📍 parada <b id="topParN">01</b><span id="topParJ"></span></span><button type="button" class="comp" id="btComp" onclick="abreComp()">💻 Tecnologia</button><button type="button" id="btFSc" title="tela cheia" onclick="alternaCheia()"><span class="ic">🖥️</span><span class="tx"> Tela cheia</span></button>
   <div id="abas"><button type="button" id="abTipo" onclick="aba('tipo')">🧩 por tipo</button><button type="button" id="abLab" onclick="abaLab()">🧪 laboratório</button><button type="button" id="abTrilha" class="on" onclick="aba('trilha')">🗺️ trilha</button></div></div>
 <div class="pg" id="pgTipo"></div>
 <div class="pg" id="pgLab"><div class="grupo" style="--c:#F3E5F5;--b:#6A1B9A"><div class="gt">🧪 Laboratório · jogos em teste</div><div class="gd">Aqui entram os jogos novos, antes de irem para a trilha.<br>Jogo do laboratório não vale parada nem nota.<br>Jogou? Conte ao professor o que achou.</div><div class="jg"><span class="em">🐛</span><span><span class="nm">Minhoca do Código</span><br><span class="ds">coma os blocos na ordem e monte o programa</span><br><span class="fs">03 fases · em teste</span></span><span class="ac"><button type="button" onclick="abreJogo('minhoca', null)">▶ jogar</button></span></div><div class="jg"><span class="em">🔗</span><span><span class="nm">Par do Caminho</span><br><span class="ds">ligue o nome do bloco ao que ele faz, com caminho livre</span><br><span class="fs">03 fases · em teste</span></span><span class="ac"><button type="button" onclick="abreJogo('parcaminho', null)">▶ jogar</button></span></div><div class="jg"><span class="em">🔍</span><span><span class="nm">Acha a Diferença</span><br><span class="ds">dois programas quase iguais: ache o que mudou</span><br><span class="fs">03 fases · em teste</span></span><span class="ac"><button type="button" onclick="abreJogo('diferenca', null)">▶ jogar</button></span></div><div class="jg"><span class="em">🧐</span><span><span class="nm">Caça ao Problema</span><br><span class="ds">as pistas vão cortando: ache o que causou</span><br><span class="fs">03 fases · em teste</span></span><span class="ac"><button type="button" onclick="abreJogo('caso', null)">▶ jogar</button></span></div><div class="jg"><span class="em">🗂️</span><span><span class="nm">Pilha dos Blocos</span><br><span class="ds">separe por categoria mexendo só no bloco de cima</span><br><span class="fs">03 fases · em teste</span></span><span class="ac"><button type="button" onclick="abreJogo('pilha', null)">▶ jogar</button></span></div><div class="jg"><span class="em">📖</span><span><span class="nm">HQ · O programa que travou</span><br><span class="ds">a história em 6 quadros que vai abrir a fase</span><br><span class="fs">prévia · esperando o seu ok</span></span><span class="ac"><button type="button" onclick="abreJogo('hq', null)">▶ ler</button></span></div><div class="jg"><span class="em">🎲</span><span><span class="nm">Dominó dos Blocos</span><br><span class="ds">encaixe o que um entrega no que o outro precisa, contra o BIT</span><br><span class="fs">03 fases · em teste</span></span><span class="ac"><button type="button" onclick="abreJogo('domino', null)">▶ jogar</button></span></div><div class="jg"><span class="em">🎯</span><span><span class="nm">Tiro ao Alvo dos Blocos</span><br><span class="ds">a mira anda sozinha: atire no passo que vem agora</span><br><span class="fs">03 fases · em teste</span></span><span class="ac"><button type="button" onclick="abreJogo('alvo', null)">▶ jogar</button></span></div><div class="jg"><span class="em">🏰</span><span><span class="nm">Torre contra o Bug</span><br><span class="ds">duas torres iguais viram um laço</span><br><span class="fs">03 fases · em teste</span></span><span class="ac"><button type="button" onclick="abreJogo('torre', null)">▶ jogar</button></span></div><div class="jg"><span class="em">🗝️</span><span><span class="nm">Torre das Chaves</span><br><span class="ds">a chave é um número guardado, a porta é um SE</span><br><span class="fs">03 fases · em teste</span></span><span class="ac"><button type="button" onclick="abreJogo('chaves', null)">▶ jogar</button></span></div><div class="jg"><span class="em">🔵</span><span><span class="nm">Bolha do Bloco</span><br><span class="ds">junte 3 da mesma categoria, com ricochete na parede</span><br><span class="fs">03 fases · em teste</span></span><span class="ac"><button type="button" onclick="abreJogo('bolha', null)">▶ jogar</button></span></div><div class="gd">Teste os jogos e diga quais podem ir para a trilha.</div></div></div>
@@ -1256,7 +1256,7 @@ window.__plano=plano;
    Leve: sem imagem, sem biblioteca · desligar: window.GRUPO_OFF=true. ===== */
 (function(){
   if(window.GRUPO_OFF) return;
-  const EL={
+  const EL_BICHOS={
     alegria:  {e:"🦜",n:"Papagaio Pipo",  s:"Alegria",  c:"#F9A825"},
     tristeza: {e:"🐢",n:"Tartaruga Tuca", s:"Tristeza", c:"#1565C0"},
     raiva:    {e:"🐉",n:"Dragão Dino",    s:"Raiva",    c:"#C62828"},
@@ -1267,7 +1267,7 @@ window.__plano=plano;
     tedio:    {e:"🐌",n:"Lesma Lelé",     s:"Tédio",    c:"#546E7A"},
     vergonha: {e:"🦩",n:"Flamingo Flor",  s:"Vergonha", c:"#AD1457"}};
   /* o sentimento aparece NA FRASE (onda colorida em <u>) */
-  const F={
+  const F_BICHOS={
     entra:[["alegria","Chegou! Que <u>alegria</u>, partiu jogar essa parada!"],["ansiedade","Ai, que <u>ansiedade</u>! Bora, bora, começa logo!"],["medo","Tô com um <u>medinho</u> dessa fase... mas a gente encara junto."]],
     certo:[["alegria","Mandou bem demais! <u>Alegria</u> pura aqui no grupo! 🎉"],["alegria","Aí sim! Acertou na mosca, que <u>alegria</u>!"],["ansiedade","Mais uma! Tô na <u>ansiedade</u> pra ver você fechar a fase!"],["inveja","Hum... que <u>inveja</u> desse acerto, viu? Brabo!"]],
     serie:[["inveja","Sério, que <u>inveja</u>! Tá voando, ninguém segura!"],["alegria","Sequência de acertos! Minha <u>alegria</u> não cabe no grupo!"],["ansiedade","Tá quase! Minha <u>ansiedade</u> tá no teto, vai que vai!"]],
@@ -1276,6 +1276,16 @@ window.__plano=plano;
     parado:[["tedio","Que <u>tédio</u>... cadê a jogada? Toca numa peça aí!"],["tedio","Zzz... <u>tédio</u> total. Bora mexer em alguma coisa?"]],
     ganhou:[["alegria","VENCEU!!! <u>Alegria</u> do tamanho da trilha inteira! 🏆"],["inveja","Ok, admito: <u>inveja</u> total. Você é fera!"]],
     perdeu:[["tristeza","Não foi dessa vez... <u>tristeza</u> passa. Na próxima vai!"],["vergonha","Sem <u>vergonha</u> de tentar de novo, todo mundo erra."]]};
+  /* CLD-128 · Marcos 27/10 12:15: "os personagens do chat precisam ser os do Halloween
+     e das profissões, com falas fazendo sentido para eles e as emoções envolvidas".
+     O elenco de bichos NÃO foi apagado: ele é a base e volta sozinho fora da temporada.
+     A troca é por gancho, para a Central não depender do Halloween existir. */
+  let EL=EL_BICHOS, F=F_BICHOS;
+  window.cjTrocaElenco=function(el,f){ EL=el||EL_BICHOS; F=f||F_BICHOS;
+    try{ const G=document.getElementById("grupo"); if(G){ const on=G.querySelector(".gt .on");
+      if(on){ const d=on.querySelector(".hwDup"); const em=Object.keys(EL).map(function(k){ return EL[k].e }).join("");
+        on.innerHTML=(d?d.outerHTML:"")+em } } }catch(e){} };
+  window.cjElencoBicho=function(){ return {EL:EL_BICHOS, F:F_BICHOS} };
   let G=null, novas=0, sc=0, se=0, ult={}, timer=null;
   function quem(){ try{ return (typeof QUEM!=="undefined" && QUEM==="bia")?{e:"🤖",n:"B.IA",c:"#FF5FA2"}:{e:"🤖",n:"BIT",c:"#2E9BE0"} }catch(e){ return {e:"🤖",n:"BIT",c:"#2E9BE0"} } }
   function sorteia(L){ const k=L.filter(function(x){ return ult.f!==x[1] }); const x=(k.length?k:L)[Math.floor(Math.random()*(k.length?k:L).length)]; ult.f=x[1]; return x }
@@ -1611,24 +1621,30 @@ window.__plano=plano;
   82%,100%{transform:translate(50px,0) rotate(0) scale(1.02)}}
 
 /* os balões · borda grossa, nunca fina (regra do Marcos) */
-.hwCena .bal{position:absolute;z-index:6;max-width:46vw;background:#fff;color:#13202B;
-  border:5px solid #2E7D32;border-radius:16px;padding:12px 16px;
-  font:900 clamp(16px,2.2vh,24px)/1.3 Arial,Helvetica,sans-serif;opacity:0}
+/* CLD-128 · Marcos 27/10 12:15: "as frases dos personagens precisam ser maiores".
+   De clamp(16,2.2vh,24) para clamp(20,3.2vh,34): cresce ~40% e continua cabendo
+   em tela de notebook da escola. O balão acompanha, de 46vw para 52vw. */
+.hwCena .bal{position:absolute;z-index:6;max-width:52vw;background:#fff;color:#13202B;
+  border:6px solid #2E7D32;border-radius:18px;padding:14px 20px;
+  font:900 clamp(20px,3.2vh,34px)/1.28 Arial,Helvetica,sans-serif;opacity:0}
 .hwCena .bal b{color:#B71C1C}
 .hwCena .bal.b1{left:5vw;top:9vh;animation:hwFala1 5.2s ease-out 1 both}
-.hwCena .bal.b2{right:5vw;top:30vh;border-color:#E65100;animation:hwFala2 5.2s ease-out 1 both}
-@keyframes hwFala1{0%,21%{opacity:0;transform:translateY(12px)}27%{opacity:1;transform:translateY(0)}
-  44%{opacity:1}52%,100%{opacity:0}}
-@keyframes hwFala2{0%,30%{opacity:0;transform:translateY(12px)}38%{opacity:1;transform:translateY(0)}
-  84%{opacity:1}92%,100%{opacity:0}}
+.hwCena .bal.b2{right:5vw;top:33vh;border-color:#E65100;animation:hwFala2 5.2s ease-out 1 both}
+/* CLD-130 · PADRONIZADOR_004 S.04.02: os dois baloes FICAM na tela ate o
+   estudante clicar em avancar. Antes o primeiro sumia aos 52% e a cena
+   terminava com so uma fala visivel. */
+@keyframes hwFala1{0%,21%{opacity:0;transform:translateY(12px)}
+  27%,100%{opacity:1;transform:translateY(0)}}
+@keyframes hwFala2{0%,38%{opacity:0;transform:translateY(12px)}
+  46%,100%{opacity:1;transform:translateY(0)}}
 
 /* a placa do lugar e o botão pular */
 .hwCena .hwLugar{position:absolute;left:50%;transform:translateX(-50%);bottom:3vh;z-index:7;
-  background:#13202B;color:#FFBF00;border:4px solid #FFBF00;border-radius:999px;
-  padding:6px 18px;font:900 clamp(14px,1.8vh,20px) Arial,Helvetica,sans-serif}
+  background:#13202B;color:#FFBF00;border:5px solid #FFBF00;border-radius:999px;
+  padding:7px 22px;font:900 clamp(16px,2.1vh,24px) Arial,Helvetica,sans-serif}
 .hwCena .pular{position:absolute;right:16px;top:16px;z-index:8;cursor:pointer;
-  background:#fff;color:#13202B;border:4px solid #13202B;border-radius:999px;
-  padding:8px 18px;font:900 clamp(14px,1.8vh,20px) Arial,Helvetica,sans-serif}
+  background:#fff;color:#13202B;border:5px solid #13202B;border-radius:999px;
+  padding:9px 22px;font:900 clamp(16px,2.1vh,24px) Arial,Helvetica,sans-serif}
 
 /* quem pediu menos movimento vê quadro parado, com os dois balões visíveis */
 @media (prefers-reduced-motion:reduce){
@@ -1655,6 +1671,249 @@ window.__plano=plano;
   padding:6px 14px;margin:4px;font:900 15px Arial,Helvetica,sans-serif}
 .cjSom .ic,.cjAmb .ic{font-size:20px}   /* piso de 20 px para emoji na tela */
 .cjSom[disabled]{opacity:.55;cursor:not-allowed}
+
+/* ═══════════════════════════════════════════════════════════════
+   CLD-127 · O CHAT DA PARADA COM O TEMA
+   Pedido do Marcos: a dupla do mundo dentro do chat, e um brilho
+   suave — "nem que seja na parte inferior do card, na parte preta".
+   ═══════════════════════════════════════════════════════════════ */
+
+/* o brilho: a cor do mundo acende de baixo para cima, por trás das falas */
+#grupo.hwBrilha{position:fixed}
+#grupo.hwBrilha::before{content:"";position:absolute;inset:0;border-radius:12px;pointer-events:none;z-index:0;
+  background:linear-gradient(to top,
+    color-mix(in srgb, var(--hwCor,#6A1B9A) 55%, transparent) 0%,
+    color-mix(in srgb, var(--hwCor,#6A1B9A) 22%, transparent) 26%,
+    transparent 62%);
+  animation:hwPulsa 4.5s ease-in-out infinite}
+@supports not (background: color-mix(in srgb, red 50%, transparent)){
+  #grupo.hwBrilha::before{background:linear-gradient(to top,rgba(106,27,154,.5),rgba(106,27,154,.18) 26%,transparent 62%)}
+}
+@keyframes hwPulsa{50%{opacity:.6}}
+#grupo.hwBrilha .gt,#grupo.hwBrilha .gl{position:relative;z-index:1}
+@media (prefers-reduced-motion:reduce){ #grupo.hwBrilha::before{animation:none} }
+
+/* a dupla do mundo, na frente dos bichos do elenco */
+#grupo.hwBrilha .gt .hwDup,#grupo .gt .hwDup{display:inline-flex;align-items:center;
+  margin-right:6px;padding:1px 6px;white-space:nowrap;flex:0 0 auto;
+  border:3px solid #FFBF00;border-radius:999px;background:#13202B;
+  font-size:22px;line-height:1.15;vertical-align:middle}
+/* a linha de emojis do elenco nao pode empurrar a dupla para baixo */
+#grupo.hwBrilha .gt .on{display:flex;align-items:center;flex-wrap:wrap;gap:1px}
+#grupo.hwBrilha .gt .hwLg,#grupo .gt .hwLg{display:block;font:900 13px Arial,Helvetica,sans-serif;color:#FFBF00;margin-top:2px}
+
+/* a fala da dupla, para não se confundir com a do BIT */
+#grupo.hwBrilha .hwFala,#grupo .hwFala{border-left-width:12px!important}
+#grupo.hwBrilha .hwFala .nm .e,#grupo .hwFala .nm .e{font-size:22px;margin-right:4px}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   CLD-127 · A CENA PARA E ESPERA O ESTUDANTE
+   Marcos, 27/10 12:06: "botão avançar pro jogo, e não entrada automática".
+   Terminada a cena, os dois balões ficam na tela e o botão aparece.
+   ═══════════════════════════════════════════════════════════════ */
+.hwCena.hwParada .vilao,
+.hwCena.hwParada .vitima,
+.hwCena.hwParada .bal{animation:none!important;opacity:1!important}
+.hwCena.hwParada .vilao{transform:translateX(0) scale(.95)}
+.hwCena.hwParada .vitima{transform:translate(50px,0) scale(1.08)}
+.hwCena.hwParada .bal.b2{top:34vh}
+
+.hwCena .hwAvanca{position:absolute;left:50%;transform:translateX(-50%);bottom:11vh;z-index:9;
+  display:inline-flex;align-items:center;gap:10px;cursor:pointer;
+  background:#2E7D32;color:#fff;border:5px solid #fff;border-radius:999px;
+  padding:12px 30px;font:900 clamp(18px,2.6vh,26px) Arial,Helvetica,sans-serif;
+  box-shadow:0 8px 0 rgba(0,0,0,.4);
+  /* CLD-127 · pulsa 3 vezes e PARA. Botao que nunca para de se mexer e
+     dificil de acertar no toque, principalmente no Chromebook da escola
+     e para quem tem dificuldade motora. Ele chama atencao e depois fica quieto. */
+  animation:hwChama 1.5s ease-in-out 3}
+.hwCena .hwAvanca .ic{font-size:26px;line-height:1}
+.hwCena .hwAvanca:hover,.hwCena .hwAvanca:focus{background:#1B5E20;outline:4px solid #FFBF00}
+@keyframes hwChama{50%{transform:translateX(-50%) scale(1.06)}}
+@media (prefers-reduced-motion:reduce){ .hwCena .hwAvanca{animation:none} }
+
+/* ═══════════════════════════════════════════════════════════════
+   CLD-130 · AS ENTRADAS ANIMADAS · pedido do PADRONIZADOR_004 (CLD-097)
+   Cada criatura chega do seu jeito, ANTES de falar.
+   Só emoji + CSS. Nenhuma imagem de fora.
+   ═══════════════════════════════════════════════════════════════ */
+
+.enCx{position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+.enCx i{position:absolute;font-style:normal;line-height:1}
+
+/* enquanto a criatura CHEGA, o vilão não está lá ainda.
+   CLD-130 · BUG CORRIGIDO: o `animation:none!important` daqui vencia a regra
+   do `.entrou` logo abaixo, e o vilão ficava invisível PARA SEMPRE. A entrada
+   rodava, acabava, e ninguém aparecia. O !important mudou de lado. */
+.hwCena.temEntrada .vilao{opacity:0;animation:none}
+.hwCena.temEntrada.entrou .vilao{opacity:1!important;
+  animation:hwChega .7s cubic-bezier(.2,.9,.3,1) both!important}
+@keyframes hwChega{0%{opacity:0;transform:translateX(0) scale(1.34)}
+  60%{opacity:1;transform:translateX(0) scale(1.24)}
+  100%{opacity:1;transform:translateX(0) scale(1.20)}}
+
+/* ---------- 🦇 VAMPIRO · morcego → fumaça → conde ---------- */
+.enVamp .enMorc{position:absolute;right:-12vw;top:16vh;font-size:min(10vh,86px);
+  animation:enVoaMorc 1.5s ease-in forwards}
+@keyframes enVoaMorc{
+  0%  {right:-12vw;top:16vh;transform:scale(.6) rotate(-8deg);opacity:0}
+  18% {opacity:1}
+  70% {right:52vw;top:34vh;transform:scale(1.5) rotate(6deg);opacity:1}
+  100%{right:62vw;top:40vh;transform:scale(2.1) rotate(0);opacity:0}}
+.enVamp .enFum{position:absolute;left:3vw;bottom:12vh;width:38vw;height:52vh}
+.enVamp .enFum i{font-size:min(19vh,160px);opacity:0;animation:enFuma 1.3s ease-out forwards}
+.enVamp .enFum i:nth-child(1){left:2%;bottom:6%;animation-delay:1.35s}
+.enVamp .enFum i:nth-child(2){left:28%;bottom:22%;animation-delay:1.5s}
+.enVamp .enFum i:nth-child(3){left:14%;bottom:38%;animation-delay:1.62s}
+@keyframes enFuma{0%{opacity:0;transform:scale(.5)}35%{opacity:.85;transform:scale(1.25)}
+  100%{opacity:0;transform:scale(2) translateY(-30px)}}
+
+/* ---------- 🧙‍♀️ BRUXA · voa ao fundo, vira a vassoura e cresce ---------- */
+.enBruxa .enVoa{position:absolute;right:-10vw;top:12vh;font-size:min(13vh,110px);
+  filter:brightness(.55);animation:enBruxaVoa 2.8s cubic-bezier(.3,.1,.4,1) forwards}
+@keyframes enBruxaVoa{
+  0%  {right:-10vw;top:12vh;transform:rotate(-14deg) scale(.85);opacity:0;filter:brightness(.45)}
+  8%  {opacity:1}
+  /* atravessa o fundo, da direita para a esquerda */
+  50% {right:62vw;top:17vh;transform:rotate(-10deg) scale(1);opacity:1;filter:brightness(.6)}
+  /* no canto esquerdo, vira a vassoura PARA O ESTUDANTE */
+  64% {right:72vw;top:22vh;transform:rotate(58deg) scale(1.5);filter:brightness(.85)}
+  /* e vem crescendo, de frente */
+  86% {right:66vw;top:32vh;transform:rotate(86deg) scale(3.4);opacity:.95;filter:brightness(1)}
+  100%{right:62vw;top:38vh;transform:rotate(90deg) scale(4.6);opacity:0;filter:brightness(1)}}
+
+/* ---------- ✋ ZUMBI sai da terra + 💀 ossos se montam ---------- */
+.enZumbi .enTerra{position:absolute;left:4vw;bottom:11vh;width:26vw;height:5vh;
+  background:radial-gradient(ellipse at 50% 20%,#3E2723 0%,rgba(62,39,35,0) 72%);
+  opacity:0;animation:enTerraAbre .5s ease-out .5s forwards}
+@keyframes enTerraAbre{to{opacity:1}}
+.enZumbi .enMao{position:absolute;left:12vw;bottom:9vh;font-size:min(11vh,92px);
+  opacity:0;animation:enSaiMao 2.2s cubic-bezier(.3,1.3,.5,1) .6s forwards}
+@keyframes enSaiMao{
+  0%  {opacity:0;transform:translateY(60px) rotate(-14deg) scale(.7)}
+  22% {opacity:1;transform:translateY(-10px) rotate(-6deg) scale(1)}
+  34% {transform:translateY(4px) rotate(4deg) scale(1)}
+  58% {opacity:1;transform:translateY(-18px) rotate(-3deg) scale(1.05)}
+  100%{opacity:0;transform:translateY(-70px) rotate(0) scale(1.2)}}
+.enZumbi .enOssos{position:absolute;right:28vw;bottom:13vh;width:16vw;height:30vh}
+.enZumbi .enOssos i{font-size:min(7vh,56px);opacity:0;animation:enCaiOsso 1.5s ease-in forwards}
+.enZumbi .enOssos i:nth-child(1){left:0;animation-delay:.9s}
+.enZumbi .enOssos i:nth-child(2){left:40%;animation-delay:1.15s}
+.enZumbi .enOssos i:nth-child(3){left:76%;animation-delay:1.4s}
+@keyframes enCaiOsso{0%{opacity:0;top:-30%;transform:rotate(0)}
+  25%{opacity:1}80%{opacity:1;top:72%;transform:rotate(300deg)}
+  100%{opacity:0;top:78%;transform:rotate(360deg)}}
+
+/* ---------- 🫧 MONSTRO DO PÂNTANO · bolhas → olhos → a criatura ---------- */
+.enPant .enBolhas{position:absolute;left:6vw;bottom:10vh;width:30vw;height:34vh}
+.enPant .enBolhas i{font-size:min(9vh,76px);opacity:0;animation:enSobeBolha 1.5s ease-out forwards}
+.enPant .enBolhas i:nth-child(1){left:6%;animation-delay:0s}
+.enPant .enBolhas i:nth-child(2){left:34%;animation-delay:.22s}
+.enPant .enBolhas i:nth-child(3){left:60%;animation-delay:.44s}
+.enPant .enBolhas i:nth-child(4){left:20%;animation-delay:.66s}
+@keyframes enSobeBolha{0%{opacity:0;bottom:0;transform:scale(.5)}
+  30%{opacity:.9}100%{opacity:0;bottom:70%;transform:scale(1.5)}}
+.enPant .enOlhos{position:absolute;left:10vw;bottom:30vh;font-size:min(16vh,138px);
+  opacity:0;animation:enAbreOlhos 1.5s ease-out 1.3s forwards}
+@keyframes enAbreOlhos{0%{opacity:0;transform:scale(.4)}
+  28%{opacity:1;transform:scale(1)}62%{opacity:1;transform:scale(1.08)}
+  100%{opacity:0;transform:scale(1.9)}}
+.enPant .enLodo{position:absolute;left:8vw;bottom:14vh;width:24vw;height:30vh}
+.enPant .enLodo i{font-size:min(8vh,64px);opacity:0;animation:enEscorre 1.4s ease-in 2.1s forwards}
+.enPant .enLodo i:nth-child(1){left:14%;top:0}
+.enPant .enLodo i:nth-child(2){left:62%;top:16%;animation-delay:2.25s}
+@keyframes enEscorre{0%{opacity:0;transform:translateY(-14px) rotate(0)}
+  30%{opacity:.9}100%{opacity:0;transform:translateY(60px) rotate(130deg)}}
+
+/* ---------- 🌕 LOBISOMEM · a lua cresce, a sombra vem ---------- */
+.enLobo .enLua{position:absolute;left:14vw;top:7vh;font-size:min(15vh,128px);
+  opacity:0;animation:enCresceLua 1.9s ease-out forwards}
+@keyframes enCresceLua{0%{opacity:0;transform:scale(.4)}
+  30%{opacity:.8;transform:scale(1)}70%{opacity:1;transform:scale(1.7)}
+  100%{opacity:.55;transform:scale(1.35)}}
+.enLobo .enSombra{position:absolute;left:1vw;bottom:11vh;width:38vw;height:42vh;
+  background:radial-gradient(ellipse at 40% 80%,rgba(0,0,0,.85) 0%,rgba(0,0,0,0) 68%);
+  opacity:0;transform:scale(.5);animation:enVemSombra 1.5s ease-out 1.1s forwards}
+@keyframes enVemSombra{0%{opacity:0;transform:scale(.5)}
+  55%{opacity:1;transform:scale(1.15)}100%{opacity:.5;transform:scale(1)}}
+
+/* ---------- 👻 FANTASMA · atravessa a parede e fica nítido ---------- */
+.enFant .enParede{position:absolute;left:0;top:0;width:24vw;height:100%;
+  background:linear-gradient(90deg,rgba(40,34,52,.92) 0%,rgba(40,34,52,.5) 72%,rgba(40,34,52,0) 100%);
+  animation:enAbreParede 2.4s ease-out forwards}
+@keyframes enAbreParede{0%,42%{opacity:1}100%{opacity:0}}
+.hwCena.enFant.temEntrada .vilao{opacity:.12;animation:enAtravessa 2.4s ease-out both!important}
+@keyframes enAtravessa{
+  0%  {opacity:0;filter:blur(10px);transform:translateX(-38%) scale(1.20)}
+  34% {opacity:.28;filter:blur(7px);transform:translateX(-16%) scale(1.20)}
+  72% {opacity:.6;filter:blur(3px);transform:translateX(-4%) scale(1.20)}
+  100%{opacity:1;filter:blur(0);transform:translateX(0) scale(1.20)}}
+
+/* ---------- 🎃 ABÓBORA · acende por dentro ---------- */
+.enAbob .enVela{position:absolute;left:9vw;bottom:22vh;width:22vw;height:26vh;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,167,38,.92) 0%,rgba(255,111,0,.4) 44%,rgba(255,111,0,0) 72%);
+  opacity:0;animation:enAcende 2.3s ease-out forwards}
+@keyframes enAcende{0%{opacity:0;transform:scale(.2)}
+  30%{opacity:.35;transform:scale(.7)}48%{opacity:.9;transform:scale(1.1)}
+  58%{opacity:.5;transform:scale(.95)}70%{opacity:1;transform:scale(1.15)}
+  100%{opacity:.7;transform:scale(1)}}
+.hwCena.enAbob.temEntrada .vilao{opacity:0;animation:enAcendeAb 2.3s ease-out both!important}
+@keyframes enAcendeAb{0%,24%{opacity:0;filter:brightness(.2)}
+  48%{opacity:1;filter:brightness(.55)}58%{opacity:1;filter:brightness(.3)}
+  70%,100%{opacity:1;filter:brightness(1)}}
+
+/* ---------- 🕷️ ARANHA · desce pelo fio ---------- */
+.enAranha .enFio{position:absolute;left:13vw;top:0;width:5px;height:0;
+  background:linear-gradient(#fff,rgba(255,255,255,.35));
+  animation:enDesceFio 1.7s cubic-bezier(.3,.8,.4,1) forwards}
+@keyframes enDesceFio{to{height:46vh}}
+.enAranha .enAra{position:absolute;left:9vw;top:-14vh;font-size:min(17vh,146px);
+  animation:enDesceAra 2.5s cubic-bezier(.3,.8,.4,1) forwards}
+@keyframes enDesceAra{0%{top:-10vh;opacity:0}12%{opacity:1}
+  68%{top:40vh}78%{top:36vh}88%{top:40vh}100%{top:40vh;opacity:0}}
+
+/* ---------- 🧻 MÚMIA · as faixas se desenrolam ---------- */
+.enMumia .enFaixas{position:absolute;left:4vw;bottom:13vh;width:30vw;height:48vh}
+.enMumia .enFaixas i{position:absolute;left:0;width:100%;height:8%;
+  background:linear-gradient(90deg,rgba(236,224,200,0),rgba(236,224,200,.92),rgba(236,224,200,0));
+  border-radius:999px;transform-origin:left center}
+.enMumia .enFaixas i:nth-child(1){top:8%;animation:enDesenrola 2.6s ease-in-out forwards}
+.enMumia .enFaixas i:nth-child(2){top:26%;animation:enDesenrola 2.6s ease-in-out .14s forwards}
+.enMumia .enFaixas i:nth-child(3){top:44%;animation:enDesenrola 2.6s ease-in-out .28s forwards}
+.enMumia .enFaixas i:nth-child(4){top:62%;animation:enDesenrola 2.6s ease-in-out .42s forwards}
+.enMumia .enFaixas i:nth-child(5){top:80%;animation:enDesenrola 2.6s ease-in-out .56s forwards}
+@keyframes enDesenrola{0%{transform:scaleX(1) rotate(0);opacity:.95}
+  45%{transform:scaleX(1.25) rotate(-5deg);opacity:.9}
+  100%{transform:scaleX(0) rotate(14deg) translateX(70px);opacity:0}}
+.hwCena.enMumia.temEntrada .vilao{opacity:0;animation:enSaiMumia 2.8s ease-out both!important}
+@keyframes enSaiMumia{0%,40%{opacity:0}75%{opacity:.7}100%{opacity:1;transform:translateX(0) scale(1.20)}}
+/* uma faixa fica presa nele: sem isso o faraó vira só um rei coroado */
+.enMumia .enFaixas i:nth-child(3){animation:enFaixaPresa 2.8s ease-in-out .28s forwards}
+@keyframes enFaixaPresa{0%{transform:scaleX(1);opacity:.95}
+  60%{transform:scaleX(.55) rotate(-8deg);opacity:.9}
+  100%{transform:scaleX(.34) rotate(-12deg) translateX(10px);opacity:.75}}
+
+/* ---------- ⚡ CIENTISTA · o raio estala e ela aparece no clarão ---------- */
+.enRaio .enClarao{position:absolute;inset:0;background:#EAF6FF;opacity:0;
+  animation:enEstala 2.2s ease-out forwards}
+@keyframes enEstala{0%,24%{opacity:0}27%{opacity:.92}31%{opacity:.1}
+  35%{opacity:.78}40%{opacity:.06}46%{opacity:.5}54%,100%{opacity:0}}
+.enRaio .enZap{position:absolute;left:10vw;top:4vh;font-size:min(16vh,140px);opacity:0;
+  animation:enZapa 2.2s ease-out forwards}
+@keyframes enZapa{0%,22%{opacity:0;transform:scale(.4) rotate(-12deg)}
+  28%{opacity:1;transform:scale(1.3) rotate(4deg)}
+  36%{opacity:.3;transform:scale(1) rotate(0)}
+  44%{opacity:1;transform:scale(1.15)}60%,100%{opacity:0;transform:scale(1.4)}}
+.hwCena.enRaio.temEntrada .vilao{opacity:0;animation:enApareceRaio 2.4s steps(1,end) both!important}
+@keyframes enApareceRaio{0%,26%{opacity:0}28%{opacity:1}31%{opacity:0}
+  35%{opacity:1}40%{opacity:0}46%,100%{opacity:1;transform:translateX(0) scale(1.20)}}
+
+/* ---------- quem pediu menos movimento não vê entrada nenhuma ---------- */
+@media (prefers-reduced-motion:reduce){
+  .enCx{display:none}
+  .hwCena.temEntrada .vilao{opacity:1!important;animation:none!important;transform:translateX(0) scale(1.1)!important}
+}
 </style>
 <script>/* ===== SOM DE FUNDO TEMÁTICO · SINTETIZADO, SEM ARQUIVO =====
    N.02.04.04_CENTRAL-DE-JOGOS_001 · CLD-119 · 27/10/2026
@@ -1687,15 +1946,15 @@ window.__plano=plano;
   var temAudio = !!(window.AudioContext || window.webkitAudioContext);
 
   var RECEITA = {
-    "m01-floresta":    ["vento", "grilos"],
+    "m01-floresta":    ["vento", "grilos", "uivo", "sapo"],   /* CLD-134 · 004: era ["vento","grilos"] */
     "m02-castelo":     ["vento"],
     "m02i-salao":      ["vento"],
-    "m03-pantano":     ["grilos", "gotejar"],
-    "m04-cemiterio":   ["vento"],
+    "m03-pantano":     ["sapo", "grilos", "gotejar"],   /* CLD-134 · 004: era ["grilos","gotejar"] */
+    "m04-cemiterio":   ["vento", "uivo"],   /* CLD-134 · 004: era ["vento"] */
     "m05-colina":      ["vento", "uivo"],
     "m06-laboratorio": ["eletrico", "fervura"],
     "m07-casa":        ["vento", "gotejar"],
-    "m08-horta":       ["vento", "grilos"],
+    "m08-horta":       ["vento", "grilos", "sapo"],   /* CLD-134 · 004: era ["vento","grilos"] */
     "m09-tumba":       ["vento"],
     "m10-covil":       ["fervura", "gotejar"]
   };
@@ -1739,7 +1998,7 @@ window.__plano=plano;
         var o = ctx.createOscillator(), g = ctx.createGain();
         o.type = "square"; o.frequency.value = 3800 + Math.random() * 900;
         g.gain.setValueAtTime(0, ctx.currentTime);
-        g.gain.linearRampToValueAtTime(0.05, ctx.currentTime + 0.012);
+        g.gain.linearRampToValueAtTime(0.11, ctx.currentTime + 0.012);   /* CLD-134 · 004: era 0.05, o Marcos nao ouvia */
         g.gain.linearRampToValueAtTime(0, ctx.currentTime + 0.05);
         o.connect(g); g.connect(mestre); o.start(); o.stop(ctx.currentTime + 0.06);
         setTimeout(um, 180 + Math.random() * 700);
@@ -1794,6 +2053,30 @@ window.__plano=plano;
       estalo();
       return [{ stop: function () { parar = true; } }];
     },
+    /* CLD-134 · 004: som NOVO. O Marcos nao ouvia sapo nenhum no pantano. */
+    sapo: function () {
+      var parar = false;
+      function coaxa() {
+        if (parar || !ctx) return;
+        var t0 = ctx.currentTime, k;
+        for (k = 0; k < 2; k++) {
+          var o = ctx.createOscillator(), f = ctx.createBiquadFilter(),
+              g = ctx.createGain(), t = t0 + k * 0.16;
+          o.type = "sawtooth";
+          o.frequency.setValueAtTime(140 + Math.random() * 40, t);
+          o.frequency.linearRampToValueAtTime(95, t + 0.11);
+          f.type = "bandpass"; f.frequency.value = 520; f.Q.value = 3;
+          g.gain.setValueAtTime(0, t);
+          g.gain.linearRampToValueAtTime(0.22, t + 0.02);
+          g.gain.exponentialRampToValueAtTime(0.001, t + 0.13);
+          o.connect(f); f.connect(g); g.connect(mestre);
+          o.start(t); o.stop(t + 0.15);
+        }
+        setTimeout(coaxa, 1200 + Math.random() * 2800);
+      }
+      setTimeout(coaxa, 600);
+      return [{ stop: function () { parar = true; } }];
+    },
     uivo: function () {
       var parar = false;
       function uiva() {
@@ -1804,12 +2087,12 @@ window.__plano=plano;
         o.frequency.linearRampToValueAtTime(330, ctx.currentTime + 0.7);
         o.frequency.linearRampToValueAtTime(170, ctx.currentTime + 2.0);
         g.gain.setValueAtTime(0, ctx.currentTime);
-        g.gain.linearRampToValueAtTime(0.07, ctx.currentTime + 0.35);
+        g.gain.linearRampToValueAtTime(0.16, ctx.currentTime + 0.35);   /* CLD-134 · 004: era 0.07 */
         g.gain.linearRampToValueAtTime(0, ctx.currentTime + 2.1);
         o.connect(g); g.connect(mestre); o.start(); o.stop(ctx.currentTime + 2.2);
-        setTimeout(uiva, 14000 + Math.random() * 22000);   /* raro, senão cansa */
+        setTimeout(uiva, 9000 + Math.random() * 11000);   /* CLD-134 · 004: era 14000 + rand*22000 */
       }
-      setTimeout(uiva, 5000);
+      setTimeout(uiva, 2500);   /* CLD-134 · 004: era 5000 */
       return [{ stop: function () { parar = true; } }];
     }
   };
@@ -2349,21 +2632,26 @@ window.__plano=plano;
         vilao:"Pinta meu retrato? <b>Faz 400 anos que não me vejo.<\/b>",
         vitima:"Espelho não pega, né? Senta aí, vou desenhar." } ] },
 
-    "m03-pantano": { dupla: "Lodo e Coaxa", tons: [
+    /* CLD-130 · correcao do Marcos: o pantano NAO e do zumbi. Aqui mora o
+       MONSTRO DO PANTANO — criatura de agua parada, feita de lodo e folha.
+       O zumbi foi para o cemiterio, que e onde ele faz sentido. */
+    "m03-pantano": { dupla: "Limo e Coaxa", tons: [
       { tom:"travessura", quem:"mecanico",
-        vilao:"Moço… <b>meu braço caiu dentro do motor.<\/b> Tem conserto?",
-        vitima:"Caiu o QUÊ no motor?! Sai, sai, sai!" },
+        vilao:"Moço… <b>entrou folha no seu motor.<\/b> Fui eu. Desculpa.",
+        vitima:"Folha? Isso é um PÂNTANO inteiro no meu motor!" },
       { tom:"terror", quem:"bombeira",
-        vilao:"Não acenda a lanterna. <b>Ele está entre nós dois.<\/b>",
-        vitima:"Não tem nada entre a gente, Lodo. Não tem… tem?" },
+        vilao:"Não acenda a lanterna. <b>A água parada está se mexendo.<\/b>",
+        vitima:"Limo… eu não estou vendo você. Onde você está?" },
       { tom:"doce", quem:"cozinheiro",
         vilao:"Que cheiro bom. <b>Sobrou sopa?<\/b>",
-        vitima:"Sobrou. Mas lava a mão. As duas. Se achar as duas." } ] },
+        vitima:"Sobrou. Mas senta longe, que você está pingando." } ] },
 
-    "m04-cemiterio": { dupla: "Ossório e Caveirinha", tons: [
+    /* CLD-130 · o ZUMBI mora aqui: a mao sai da terra entre as lapides.
+       O esqueleto sobe junto, osso por osso. */
+    "m04-cemiterio": { dupla: "Zéfiro e Ossório", tons: [
       { tom:"travessura", quem:"guarda",
-        vilao:"Guarda! <b>Querem roubar meu túmulo.<\/b> Fui eu.",
-        vitima:"O senhor se denunciou sozinho. De novo." },
+        vilao:"Guarda! <b>Alguém mexeu na minha cova.<\/b> …fui eu, saindo.",
+        vitima:"O senhor se denunciou sozinho. De novo, Zéfiro." },
       { tom:"terror", quem:"professora",
         vilao:"Leia a lápide do meio. <b>Em voz alta, se tiver coragem.<\/b>",
         vitima:"Esse nome… esse nome é o meu. Com a data de hoje." },
@@ -2642,6 +2930,116 @@ window.__plano=plano;
 })();
 
 ;
+/* ===== ENTRADAS ANIMADAS · cada criatura chega do seu jeito =====
+   N.02.04.04_CENTRAL-DE-JOGOS_001 · CLD-130 · 27/10/2026
+   Pedido: PADRONIZADOR_004 · CLD-097 · CMD v01.01
+
+   A REGRA QUE MANDA AQUI:
+   a entrada termina ANTES do primeiro balão. Primeiro a criatura CHEGA,
+   depois ela fala. Enquanto ela chega, ninguém diz nada.
+
+   SÓ EMOJI + SVG + CSS. Nenhuma imagem de fora. Funciona sem internet.
+
+   CADA ENTRADA DECLARA:
+     ms    · quanto dura, em milissegundos
+     html  · os pedaços que a animação precisa (fumaça, lua, fio, faixas…)
+     fim   · o que fica na tela quando acaba (normalmente nada: o vilão assume)
+
+   CORREÇÕES DO MARCOS QUE ENTRARAM AQUI:
+   · o ZUMBI mora no CEMITÉRIO, não no pântano. A mão sai da terra.
+   · o PÂNTANO tem um MONSTRO DO PÂNTANO, que é outra criatura.
+*/
+(function () {
+  "use strict";
+
+  /* cada entrada: o HTML extra e quanto tempo ela ocupa */
+  var E = {
+
+    /* 🦇 VAMPIRO · castelo e salão
+       o morcego voa até a frente, vira fumaça, a fumaça abre e sai o conde */
+    "m02-castelo": { ms: 2600, cls: "enVamp", html:
+      '<div class="enMorc">🦇<\/div><div class="enFum"><i>💨<\/i><i>💨<\/i><i>💨<\/i><\/div>' },
+
+    /* 🧙‍♀️ BRUXA · floresta e covil
+       voa AO FUNDO, da direita para a esquerda; no canto vira a vassoura
+       para o estudante e vem crescendo até virar a bruxa */
+    "m01-floresta": { ms: 2800, cls: "enBruxa", html:
+      '<div class="enVoa">🧹<\/div>' },
+
+    /* ✋ ZUMBI + 💀 ESQUELETO · cemitério
+       a mão sai da terra entre as lápides e ele sobe inteiro;
+       ao lado, os ossos caem e se montam */
+    "m04-cemiterio": { ms: 2900, cls: "enZumbi", html:
+      '<div class="enMao">✋<\/div><div class="enTerra"><\/div>' +
+      '<div class="enOssos"><i>🦴<\/i><i>🦴<\/i><i>🦴<\/i><\/div>' },
+
+    /* 🫧 MONSTRO DO PÂNTANO · pântano · NÃO é zumbi
+       bolhas sobem na água, dois olhos aparecem, a criatura sai coberta de lodo */
+    "m03-pantano": { ms: 3000, cls: "enPant", html:
+      '<div class="enBolhas"><i>🫧<\/i><i>🫧<\/i><i>🫧<\/i><i>🫧<\/i><\/div>' +
+      '<div class="enOlhos">👀<\/div><div class="enLodo"><i>🍃<\/i><i>🍃<\/i><\/div>' },
+
+    /* 🌕 LOBISOMEM · colina
+       a lua cresce, a sombra aparece no chão e então vem o uivo */
+    "m05-colina": { ms: 2700, cls: "enLobo", html:
+      '<div class="enLua">🌕<\/div><div class="enSombra"><\/div>' },
+
+    /* 👻 FANTASMA · casa
+       atravessa a parede, transparente, e vai ficando nítido */
+    "m07-casa": { ms: 2400, cls: "enFant", html:
+      '<div class="enParede"><\/div>' },
+
+    /* 🎃 ABÓBORA · horta
+       acende por dentro, como lanterna que alguém ascendeu agora */
+    "m08-horta": { ms: 2300, cls: "enAbob", html:
+      '<div class="enVela"><\/div>' },
+
+    /* 🕷️ ARANHA · covil
+       desce pelo fio, do teto até a altura do rosto */
+    "m10-covil": { ms: 2500, cls: "enAranha", html:
+      '<div class="enFio"><\/div><div class="enAra">🕷️<\/div>' },
+
+    /* 🧻 MÚMIA · tumba
+       as faixas se desenrolam até o faraó aparecer */
+    "m09-tumba": { ms: 2800, cls: "enMumia", html:
+      '<div class="enFaixas"><i><\/i><i><\/i><i><\/i><i><\/i><i><\/i><\/div>' },
+
+    /* ⚡ CIENTISTA · laboratório
+       um raio estala e ela aparece dentro do clarão */
+    "m06-laboratorio": { ms: 2400, cls: "enRaio", html:
+      '<div class="enClarao"><\/div><div class="enZap">⚡<\/div>' }
+  };
+  E["m02i-salao"] = E["m02-castelo"];   /* o salão é dentro do castelo: mesmo vampiro */
+
+  function daMundo(mundo) { return E[mundo] || E["m01-floresta"]; }
+
+  /* roda a entrada numa cena ja montada. Devolve quanto tempo ela ocupa. */
+  function roda(tela, mundo) {
+    var parado = false;
+    try { parado = window.matchMedia("(prefers-reduced-motion: reduce)").matches } catch (e) {}
+    if (parado) return 0;                 /* quadro parado: sem entrada */
+    var e = daMundo(mundo);
+    if (!e) return 0;
+    try {
+      var cx = document.createElement("div");
+      cx.className = "enCx " + e.cls;
+      cx.setAttribute("aria-hidden", "true");
+      cx.innerHTML = e.html;
+      tela.appendChild(cx);
+      tela.classList.add("temEntrada", e.cls);
+      /* enquanto a criatura chega, ela ainda nao "esta la" */
+      setTimeout(function () {
+        tela.classList.add("entrou");
+        setTimeout(function () { if (cx.parentNode) cx.remove() }, 700);
+      }, e.ms);
+      return e.ms;
+    } catch (x) { return 0 }
+  }
+
+  window.cjEntradas = { roda: roda, daMundo: daMundo, todas: E };
+})();
+
+;
 /* ===== HALLOWEEN · A PECA UNICA QUE O 004 PLUGA =====
    N.02.04.04_CENTRAL-DE-JOGOS_001 · CLD-124 · 27/10/2026
 
@@ -2666,6 +3064,8 @@ window.__plano=plano;
 
    Isso faz, nesta ordem:
      1. abre a CENA em tela cheia (cold open, 5,2 s, com botao pular)
+        terminada a cena, ela PARA e mostra o botao "comecar o jogo":
+        quem decide quando o jogo abre e o estudante, nao o relogio
      2. o bicho natural toca, a regra quebra, o susto acontece
      3. os dois personagens falam, no tom daquela parada
      4. CORTA
@@ -2682,7 +3082,15 @@ window.__plano=plano;
   "use strict";
 
   var CEN = {};            /* id -> cenario */
-  var VISTO = "cjHwVisto";  /* quais blocos ja mostraram a cena */
+  /* CLD-131 · PADRONIZADOR_004 (CLD-114 S.06): o registro era UM por navegador.
+     No notebook compartilhado da escola, o 2o estudante nao via cena nenhuma.
+     Agora a chave carrega o id do estudante. Sem id, cai num "anon" e o
+     comportamento e o de antes — nada quebra em quem nao define o id. */
+  function chaveBase() {
+    var aluno = "";
+    try { aluno = String(window.M7_HW_ALUNO || window.cjAluno || "").trim() } catch (e) {}
+    return "cjHwVisto_" + (aluno || "anon");
+  }
   var atual = "";
 
   function porId(id) { return CEN[id] || CEN["m01-floresta"] || null; }
@@ -2693,13 +3101,13 @@ window.__plano=plano;
   }
 
   function jaViu(chave) {
-    try { return (localStorage.getItem(VISTO) || "").indexOf("|" + chave + "|") >= 0; }
+    try { return (localStorage.getItem(chaveBase()) || "").indexOf("|" + chave + "|") >= 0; }
     catch (e) { return false; }
   }
   function marca(chave) {
     try {
-      var v = localStorage.getItem(VISTO) || "|";
-      if (v.indexOf("|" + chave + "|") < 0) localStorage.setItem(VISTO, v + chave + "|");
+      var k = chaveBase(), v = localStorage.getItem(k) || "|";
+      if (v.indexOf("|" + chave + "|") < 0) localStorage.setItem(k, v + chave + "|");
     } catch (e) {}
   }
 
@@ -2766,18 +3174,34 @@ window.__plano=plano;
       '<button type="button" class="pular">⏭ pular<\/button>';
     document.body.appendChild(tela);
 
+    /* CLD-130 · A ENTRADA roda PRIMEIRO. Enquanto a criatura chega, ninguem fala.
+       As falas e o susto sao adiados pelo tempo que a entrada ocupa. */
+    var atraso = 0;
+    try { if (window.cjEntradas) atraso = window.cjEntradas.roda(tela, id) }
+    catch (e) { try { console.warn("[hw] entrada falhou:", e) } catch (x) {} }
+    if (atraso > 0) {
+      var b1 = tela.querySelector(".bal.b1"), b2 = tela.querySelector(".bal.b2");
+      [b1, b2].forEach(function (b) { if (b) b.style.animationDelay = (atraso / 1000) + "s" });
+      var vt = tela.querySelector(".vitima");
+      if (vt) vt.style.animationDelay = (atraso / 1000) + "s";
+    }
+
     /* o som: o bicho natural, a quebra, e so entao o susto */
     try {
       if (window.cjFauna) {
         window.cjFauna.natural(id);
-        setTimeout(function () { window.cjFauna.quebra(id) }, 500);
+        setTimeout(function () { window.cjFauna.quebra(id) }, atraso + 500);
       }
-      if (window.cjAmbiente) setTimeout(function () { window.cjAmbiente.sustar(id) }, 950);
+      if (window.cjAmbiente) setTimeout(function () { window.cjAmbiente.sustar(id) }, atraso + 950);
     } catch (e) {}
 
     /* a narracao para quem precisa ouvir */
-    try { if (window.cjNarracao) { window.cjNarracao.cena(tela); window.cjNarracao.ligaPular(tela); } }
-    catch (e) {}
+    try {
+      if (window.cjNarracao) {
+        setTimeout(function () { window.cjNarracao.cena(tela) }, atraso);
+        window.cjNarracao.ligaPular(tela);
+      }
+    } catch (e) {}
 
     var fechou = false;
     function fecha() {
@@ -2786,16 +3210,40 @@ window.__plano=plano;
       tela.classList.add("hwSai");
       setTimeout(function () { if (tela.parentNode) tela.remove(); if (aoFim) aoFim(); }, 320);
     }
+
+    /* CLD-127 · Marcos 27/10 12:06: "botao avancar pro jogo, e nao entrada automatica".
+       A cena termina e PARA. Quem decide quando o jogo comeca e o estudante.
+       Quem toca em pular vai direto, sem passar pelo botao. */
+    function ofereceAvancar() {
+      if (fechou || tela.__hwBt) return;
+      tela.__hwBt = 1;
+      try { if (window.cjNarracao) window.cjNarracao.cala() } catch (e) {}
+      tela.classList.add("hwParada");
+      var av = document.createElement("button");
+      av.type = "button"; av.className = "hwAvanca";
+      av.innerHTML = '<span class="ic">▶<\/span><span>começar o jogo<\/span>';
+      av.setAttribute("aria-label", "começar o jogo desta parada");
+      av.onclick = function (ev) { ev.stopPropagation(); fecha() };
+      tela.appendChild(av);
+      setTimeout(function () { try { av.focus() } catch (e) {} }, 80);
+    }
+
     var bt = tela.querySelector(".pular"); if (bt) bt.onclick = fecha;
-    tela.addEventListener("click", function (ev) { if (ev.target === tela) fecha() });
-    document.addEventListener("keydown", function esc(ev) {
-      if (ev.key === "Escape") { document.removeEventListener("keydown", esc); fecha() }
+    /* o clique no vazio NAO pula mais: so o botao decide. Evita o jogo abrir sem querer. */
+    document.addEventListener("keydown", function tc(ev) {
+      if (ev.key === "Escape") { document.removeEventListener("keydown", tc); fecha(); return }
+      if ((ev.key === "Enter" || ev.key === " ") && tela.__hwBt) {
+        document.removeEventListener("keydown", tc); ev.preventDefault(); fecha();
+      }
     });
 
     /* quem pediu menos movimento ve quadro parado, com os dois baloes visiveis */
     var parado = false;
     try { parado = window.matchMedia("(prefers-reduced-motion: reduce)").matches } catch (e) {}
-    setTimeout(fecha, parado ? 4200 : 5200);
+    /* CLD-130 · PADRONIZADOR_004 S.04.01: o botao aparece 3 s depois que as
+       falas comecaram. Com entrada, isso e entrada + 3 s. Sem entrada
+       (prefers-reduced-motion), e so os 3 s. Os dois baloes ficam ate o clique. */
+    setTimeout(ofereceAvancar, (parado ? 0 : atraso) + 3000);
     return tela;
   }
 
@@ -2819,14 +3267,113 @@ window.__plano=plano;
   }
 
   /* para testar sem esperar: limpa o "ja viu" */
-  function esquece() { try { localStorage.removeItem(VISTO) } catch (e) {} }
+  function esquece() { try { localStorage.removeItem(chaveBase()) } catch (e) {} }
 
   window.cjHalloween = {
     carrega: carrega, entra: entra, cena: cena, fundo: fundo, atores: atores,
     botoes: botoes, esquece: esquece,
+    jaViu: jaViu, marca: marca, chaveBase: chaveBase,   /* CLD-131 · o sumario do 004 usa */
     cenario: porId, atual: function () { return atual },
     mundos: function () { return Object.keys(CEN) }
   };
+})();
+
+;
+/* ===== O ELENCO DO CHAT NA TEMPORADA =====
+   N.02.04.04_CENTRAL-DE-JOGOS_001 · CLD-128 · 27/10/2026
+
+   PEDIDO DO MARCOS (27/10 12:15):
+   "os personagens do chat precisam ser os do Halloween E das profissões,
+    com falas fazendo sentido para eles e as emoções envolvidas"
+
+   COMO FOI RESOLVIDO:
+   · As 9 emoções continuam as mesmas. O que muda é QUEM as representa.
+   · Metade são CRIATURAS dos mundos. Metade são PESSOAS com profissão
+     (Projeto de Vida). É a mesma comunidade da cena: quem assusta e quem leva.
+   · Cada fala tem de fazer sentido para a boca que a diz. O Conde Vlad não
+     fala como a dona Fátima, e o esqueleto não fala como a professora.
+   · A emoção continua marcada na frase, com <u>, como no elenco de bichos.
+
+   O ELENCO DE BICHOS NÃO FOI APAGADO. Ele é a base e volta sozinho
+   passada a temporada (03/11), pelo gancho cjTrocaElenco(null).
+*/
+(function () {
+  "use strict";
+  if (typeof window.cjTrocaElenco !== "function") return;   /* Central antiga: nada muda */
+
+  /* ---- quem representa cada emoção ---- */
+  var EL = {
+    alegria:  { e:"🎃",  n:"Cabeça-de-Lampião", s:"Alegria",   c:"#F9A825" },
+    tristeza: { e:"👻",  n:"Fiapo",             s:"Tristeza",  c:"#1565C0" },
+    raiva:    { e:"🐺",  n:"Fenrir",            s:"Raiva",     c:"#C62828" },
+    medo:     { e:"👩‍🌾", n:"Dona Fátima",       s:"Medo",      c:"#6A1B9A" },
+    nojinho:  { e:"🧌",  n:"Limo",              s:"Nojinho",   c:"#2E7D32" },   /* CLD-130 · o pantano nao e do zumbi */
+    ansiedade:{ e:"👨‍🍳", n:"Seu Nando",         s:"Ansiedade", c:"#E65100" },
+    inveja:   { e:"🧛",  n:"Conde Vlad",        s:"Inveja",    c:"#00897B" },
+    tedio:    { e:"💀",  n:"Ossório",           s:"Tédio",     c:"#546E7A" },
+    vergonha: { e:"👩‍🏫", n:"Dona Alice",        s:"Vergonha",  c:"#AD1457" }
+  };
+
+  /* ---- as falas, na boca de cada um ----
+     Regra que segui: a fala só entra se SÓ aquele personagem poderia dizê-la.
+     Se serviria para qualquer um, está mal escrita. */
+  var F = {
+    entra: [
+      ["alegria",  "Acendi a vela pra essa parada! Que <u>alegria<\/u>, bora!"],
+      ["ansiedade","Deixei o fogão aceso lá em casa... que <u>ansiedade<\/u>! Joga logo!"],
+      ["medo",     "Vim direto da horta e já tô com um <u>medinho<\/u>. Mas fico aqui com você."],
+      ["tedio",    "Trezentos anos esperando e agora isso. <u>Tédio<\/u>. Começa aí, vai."]
+    ],
+    certo: [
+      ["alegria",  "Essa foi boa! Minha vela até cresceu de <u>alegria<\/u>! 🎃"],
+      ["alegria",  "Olha isso! Acertou e eu aqui só de <u>alegria<\/u>."],
+      ["ansiedade","Mais uma! Tô na <u>ansiedade<\/u> igual massa no forno."],
+      ["inveja",   "Acertou de primeira. Confesso: bateu uma <u>inveja<\/u> de quatrocentos anos."],
+      ["medo",     "Ufa! Acertou. Meu <u>medo<\/u> deu uma descansada."]
+    ],
+    serie: [
+      ["inveja",   "Que <u>inveja<\/u>! Nem eu, com todos esses séculos, jogava assim."],
+      ["alegria",  "Sequência! A abóbora aqui não cabe de <u>alegria<\/u>!"],
+      ["ansiedade","Tá voando! Minha <u>ansiedade<\/u> não desgruda da tela."],
+      ["raiva",    "Para de acertar que eu fico com <u>raiva<\/u>... brincadeira, continua!"]
+    ],
+    erro: [
+      ["tristeza", "Atravessei a parede e errei também. <u>Tristeza<\/u> passa, tenta de novo."],
+      ["vergonha", "Eu errei essa mesma na frente da turma. <u>Vergonha<\/u>, mas segue."],
+      ["nojinho",  "Eca, escorregou igual lodo. <u>Nojinho<\/u> de errar, né? Levanta e vai."],
+      ["medo",     "Calma, respira. O <u>medo<\/u> de errar atrapalha mais que o erro."]
+    ],
+    erros: [
+      ["raiva",    "AUUU! Que <u>raiva<\/u>! Respira e lê a peça inteira, do começo."],
+      ["medo",     "Tô com <u>medo<\/u> das jogadas acabarem. Devagar, sem pressa."],
+      ["vergonha", "Sem <u>vergonha<\/u> nenhuma. Eu repeti o ano, imagina."]
+    ],
+    parado: [
+      ["tedio",    "Trezentos anos e você parado também? <u>Tédio<\/u>. Toca numa peça."],
+      ["tedio",    "Zzz... até eu, que sou osso, tô de <u>tédio<\/u>. Bora mexer?"],
+      ["ansiedade","Tá esfriando a comida! Que <u>ansiedade<\/u>, joga alguma coisa!"]
+    ],
+    ganhou: [
+      ["alegria",  "GANHOU! <u>Alegria<\/u> do tamanho da abóbora maior da horta! 🏆"],
+      ["inveja",   "Pronto. <u>Inveja<\/u> assumida. Você é melhor que eu nisso."],
+      ["alegria",  "Mandei um boletim pra sua casa: dez. Que <u>alegria<\/u>! 🎉"]
+    ],
+    perdeu: [
+      ["tristeza", "Não foi hoje. <u>Tristeza<\/u> é vento: passa. Amanhã a gente volta."],
+      ["vergonha", "Sem <u>vergonha<\/u> de recomeçar. Todo mundo aqui já perdeu."],
+      ["medo",     "Perdeu e daí? O <u>medo<\/u> de tentar é que atrapalha mesmo."]
+    ]
+  };
+
+  function liga() {
+    var naTemporada = true;
+    try { if (window.cjAmbiente && window.cjAmbiente.naTemporada) naTemporada = window.cjAmbiente.naTemporada() }
+    catch (e) {}
+    if (naTemporada) window.cjTrocaElenco(EL, F);
+    else window.cjTrocaElenco(null, null);   /* volta o elenco de bichos, sozinho */
+  }
+  liga();
+  window.cjElencoHW = { EL: EL, F: F, liga: liga };
 })();
 
 ;
@@ -2877,13 +3424,13 @@ try{cjHalloween.carrega([
  },
  {
   "id": "m03-pantano",
-  "nome": "Pântano Esquecido",
+  "nome": "Pântano do Limo",
   "tipo": "externo",
   "cor": "#4DB6AC",
   "dupla": [
    {
-    "e": "🧟",
-    "n": "Lodo",
+    "e": "🧌",
+    "n": "Limo",
     "papel": "diz a tarefa"
    },
    {
@@ -2904,13 +3451,13 @@ try{cjHalloween.carrega([
   "cor": "#B0BEC5",
   "dupla": [
    {
-    "e": "💀",
-    "n": "Ossório",
+    "e": "🧟",
+    "n": "Zéfiro",
     "papel": "diz a tarefa"
    },
    {
-    "e": "☠️",
-    "n": "Caveirinha",
+    "e": "💀",
+    "n": "Ossório",
     "papel": "dá a pista"
    }
   ],
@@ -2948,7 +3495,7 @@ try{cjHalloween.carrega([
   "cor": "#7FE7FF",
   "dupla": [
    {
-    "e": "⚡",
+    "e": "👩‍🔬",
     "n": "Doutora Volt",
     "papel": "diz a tarefa"
    },
@@ -3014,7 +3561,7 @@ try{cjHalloween.carrega([
   "cor": "#D4A72C",
   "dupla": [
    {
-    "e": "🧟‍♂️",
+    "e": "🫅",
     "n": "Faraó Seco",
     "papel": "diz a tarefa"
    },
@@ -3036,7 +3583,7 @@ try{cjHalloween.carrega([
   "cor": "#9CCC65",
   "dupla": [
    {
-    "e": "🧙",
+    "e": "🕴️",
     "n": "Mestre Grimm",
     "papel": "diz a tarefa"
    },
@@ -3105,11 +3652,14 @@ try{cjHalloween.carrega([
   window.cjMundoDaParada = mundoDaParada;
 
   /* ---- 2 · a cena curta antes do jogo ---- */
+  var PARADA = null;          /* CLD-127 · a Central declara `let ATUAL`, que NAO e window.ATUAL.
+                                 Entao a ponte guarda a parada no proprio embrulho. */
   var abreOriginal = window.abreJogo;
   if (typeof abreOriginal === "function") {
     window.abreJogo = function (k, fase, parN) {
       var args = arguments, eu = this;
       var pn = (parN != null) ? parN : null;
+      PARADA = pn;
       if (pn == null) return abreOriginal.apply(eu, args);   /* fora da trilha: nada muda */
       var mundo = mundoDaParada(pn);
       try {
@@ -3139,8 +3689,91 @@ try{cjHalloween.carrega([
   /* a trilha se redesenha sozinha; um relogio leve basta e nao disputa com nada */
   setInterval(fundoDaTrilha, 900);
 
-  /* ---- 4 · o MESMO cenario como fundo DENTRO do jogo ---- */
+  /* ---- 4 · a DUPLA DO MUNDO no chat, e o brilho no preto ---- */
+  /* Pedido do Marcos (27/10): "os personagens envolvidos com a tematica dentro do chat...
+     os personagens do folclore eram em duplas, aproveite para deixar em duplas aqui tambem"
+     e "brilho suave mas existente, nem que seja na parte inferior do card do chat, na parte preta". */
+  function vesteChat() {
+    try {
+      var G = document.getElementById("grupo");
+      if (!G) return;
+      var pn = PARADA;
+      if (pn == null) return;
+      var mundo = mundoDaParada(pn);
+      if (G.__hwMundo === mundo) return;
+      G.__hwMundo = mundo;
+      var c = window.cjHalloween.cenario(mundo);
+      if (!c) return;
+      var cor = c.cor || "#6A1B9A";
+      var dupla = c.dupla || [];
+
+      /* a dupla entra na FRENTE dos bichos, e o lugar aparece no cabecalho */
+      var on = G.querySelector(".gt .on");
+      if (on && !on.__hw) {
+        on.__hw = 1;
+        on.innerHTML = '<span class="hwDup" title="' + (c.nome || "") + '">' +
+          dupla.map(function (d) { return d.e }).join("") + '<\/span>' + on.innerHTML;
+      } else if (on) {
+        var dp = on.querySelector(".hwDup");
+        if (dp) dp.innerHTML = dupla.map(function (d) { return d.e }).join("");
+      }
+      var tt = G.querySelector(".gt > span:first-child");
+      if (tt) tt.innerHTML = '💬 Grupo da parada <span class="hwLg">' + (c.nome || "") + '<\/span>';
+
+      /* o BRILHO: a cor do mundo acende de baixo para cima, no preto do chat */
+      G.style.setProperty("--hwCor", cor);
+      G.classList.add("hwBrilha");
+      G.style.borderColor = cor;
+
+      /* e a dupla FALA, uma vez, na entrada da parada */
+      falaDaDupla(mundo, pn, dupla, cor);
+    } catch (e) {}
+  }
+
+  function falaDaDupla(mundo, pn, dupla, cor) {
+    if (!dupla.length) return;
+    if (window.cjAmbiente && window.cjAmbiente.naTemporada && !window.cjAmbiente.naTemporada()) return;
+    var L = document.getElementById("grupoL");
+    if (!L || L.__hwPar === pn) return;
+    L.__hwPar = pn;
+    var f = window.cjFalas.daParada(mundo, pn);
+    var d0 = dupla[0], d1 = dupla[1] || dupla[0];
+    setTimeout(function () { linhaChat(L, d0.e, d0.n, f.vilao, cor) }, 1400);
+    setTimeout(function () { linhaChat(L, d1.e, d1.n, dicaDaDupla(f), cor) }, 3200);
+  }
+  /* o segundo da dupla sempre DA A PISTA: e o papel dele no elenco */
+  function dicaDaDupla(f) {
+    var por = {
+      travessura: "Ele só está brincando. Joga que eu fico de olho.",
+      terror:     "Não liga para ele. Respira e começa pelo mais fácil.",
+      doce:       "Hoje ele está de bom humor. Aproveita e joga tranquilo."
+    };
+    return por[f.tom] || por.travessura;
+  }
+  /* A Central expoe cjPoeGrupo: e a porta oficial do chat. Usando ela, a fala
+     da dupla ganha o mesmo card, o mesmo "digitando..." e o mesmo limite de 14
+     mensagens que as do BIT. Montar a mao deixava a fala sem moldura. */
+  function linhaChat(L, emoji, nome, texto, cor) {
+    try {
+      var html = '<div class="et"><span class="q">' + emoji + '<\/span><b>' + nome +
+                 '<\/b><span class="s">🎃 parada<\/span><\/div>' +
+                 '<div class="tx">' + texto + '<\/div>';
+      if (typeof window.cjPoeGrupo === "function") window.cjPoeGrupo(html, "comum", cor);
+    } catch (e) {}
+  }
+  setInterval(vesteChat, 800);
+
+  /* ---- 5 · o MESMO cenario como fundo DENTRO do jogo ---- */
   /* devolve o bilhete que a Central injeta no fim do <body> do jogo */
+  var BICHOS = { externo:["🦇","🍂","🦉","🕸️"], interno:["🕯️","🕸️","🪰"], transicao:["🍁","🦇"] };
+  function figurantes(c) {
+    var L = BICHOS[c.tipo] || BICHOS.externo, h = '<div class="hwJgA">';
+    for (var i = 0; i < 4; i++)
+      h += '<i style="top:' + (10 + i * 22) + 'vh;animation-duration:' + (20 + i * 5) +
+           's;animation-delay:' + (i * 4) + 's">' + L[i % L.length] + '<\/i>';
+    return h + '<\/div>';
+  }
+
   window.cjBilheteCenario = function (parN) {
     try {
       if (parN == null) return "";
@@ -3154,8 +3787,23 @@ try{cjHalloween.carrega([
         + '#hwJg::after{content:"";position:absolute;inset:0;'
         + 'background:radial-gradient(ellipse at 50% 42%,rgba(0,0,0,0) 0%,rgba(0,0,0,.55) 72%,rgba(0,0,0,.78) 100%)}'
         + 'body{background:transparent!important}'
+        + '.hwJgA{position:absolute;inset:0;overflow:hidden;pointer-events:none}'
+        + '.hwJgA i{position:absolute;left:-10vw;font-size:26px;font-style:normal;opacity:.45;'
+        + 'animation:hwJgP 26s linear infinite}'
+        + '@keyframes hwJgP{0%{transform:translateX(0);opacity:0}10%{opacity:.45}'
+        + '90%{opacity:.45}100%{transform:translateX(124vw) translateY(-14px);opacity:0}}'
+        + '@media (prefers-reduced-motion:reduce){.hwJgA i{animation:none;opacity:.2}}'
+        + '#hwNoite{position:fixed;inset:0;z-index:2147480000;pointer-events:none;'
+        + 'background:radial-gradient(ellipse at 50% 46%,rgba(20,8,40,0) 34%,'
+        + 'rgba(20,8,40,.34) 72%,rgba(10,4,24,.62) 100%);'
+        + 'mix-blend-mode:multiply}'
+        + '#hwLua{position:fixed;right:5vw;top:5vh;z-index:2147480001;pointer-events:none;'
+        + 'width:84px;height:84px;border-radius:50%;background:#F7F3C9;opacity:.5;'
+        + 'box-shadow:0 0 70px 36px rgba(247,243,201,.3)}'
+        + '@media (max-width:760px){#hwLua{width:54px;height:54px}}'
         + '<\/style>'
-        + '<div id="hwJg" aria-hidden="true">' + svg + '<\/div>';
+        + '<div id="hwJg" aria-hidden="true">' + svg + figurantes(c) + '<\/div>'
+        + '<div id="hwNoite" aria-hidden="true"><\/div><div id="hwLua" aria-hidden="true"><\/div>';
     } catch (e) { return "" }
   };
 })();
